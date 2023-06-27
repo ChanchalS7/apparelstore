@@ -1,0 +1,11 @@
+Passing props
+Data reactivity
+ref method in vue
+composition api : Modern way
+options api : Previous way 
+
+.vue is (single file component): component, views, app.vue 
+
+Example : xyz.com -> /home,/cart, /order 
+
+Component : Banner, Navbar -> Home(views)->App.vue 
