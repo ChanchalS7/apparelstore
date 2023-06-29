@@ -11,3 +11,11 @@ Example : xyz.com -> /home,/cart, /order
 Component : Banner, Navbar -> Home(views)->App.vue 
 
 Install QUASAR 
+productData, mock data created
+
+v-for directive use 
+to iterate over array of objects and display them as list items
+
+Life cycle hook : different segment of application , -> created state, mounted state, updated state , unmounted state 
+
+Vue Router : /cart, /home, /admin, /order, 

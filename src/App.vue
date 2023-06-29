@@ -1,6 +1,8 @@
 <template>
   <div id="container">
-  <HomeView/>
+  <!-- <HomeView/> -->
+  <!-- Don't worry about routes now, we have vue router -->
+  <router-view></router-view>
   </div>
 </template>
 <script setup>
