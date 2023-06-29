@@ -9,3 +9,5 @@ options api : Previous way
 Example : xyz.com -> /home,/cart, /order 
 
 Component : Banner, Navbar -> Home(views)->App.vue 
+
+Install QUASAR 

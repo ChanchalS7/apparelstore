@@ -1,7 +1,11 @@
 <template>
     <div id="welcome_div">
         <h1>{{welcomemsg}}</h1>
-
+        <template>
+            <q-btn color="white" text-color="black" label="Standard" />
+    
+ 
+</template>
     </div>
 </template>
 

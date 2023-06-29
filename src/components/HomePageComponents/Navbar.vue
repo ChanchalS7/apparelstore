@@ -3,7 +3,9 @@
         <div id="lhs">Home</div>
         <div id="rhs">
            <div>Account</div>
-           <div id="cart"></div>
+           <div id="cart">
+            <q-icon name="shopping_cart"/>
+           </div>
            <div id="cart_count">1</div>
         </div>
 
@@ -32,7 +34,16 @@
 #rhs {
     display:flex;
     flex: 7;
+    gap:10%;
     align-items: center;
     justify-content: flex-end;
+}
+#cart{
+    display: flex;
+    align-items: center;
+
+}
+#cart_count{
+    padding-bottom: 12px;
 }
 </style>

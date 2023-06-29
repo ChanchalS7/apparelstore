@@ -1,0 +1,353 @@
+[
+    {
+      "id": 1,
+      "imageUrl": "https://example.com/image1.jpg",
+      "category": "Electronics",
+      "title": "Smartphone",
+      "price": 499.99
+    },
+    {
+      "id": 2,
+      "imageUrl": "https://example.com/image2.jpg",
+      "category": "Clothing",
+      "title": "T-Shirt",
+      "price": 19.99
+    },
+    {
+      "id": 3,
+      "imageUrl": "https://example.com/image3.jpg",
+      "category": "Home Decor",
+      "title": "Throw Pillow",
+      "price": 29.99
+    },
+    {
+      "id": 4,
+      "imageUrl": "https://example.com/image4.jpg",
+      "category": "Electronics",
+      "title": "Wireless Earphones",
+      "price": 89.99
+    },
+    {
+      "id": 5,
+      "imageUrl": "https://example.com/image5.jpg",
+      "category": "Books",
+      "title": "Fantasy Novel",
+      "price": 12.99
+    },
+    {
+      "id": 6,
+      "imageUrl": "https://example.com/image6.jpg",
+      "category": "Clothing",
+      "title": "Jeans",
+      "price": 59.99
+    },
+    {
+      "id": 7,
+      "imageUrl": "https://example.com/image7.jpg",
+      "category": "Electronics",
+      "title": "Smart Watch",
+      "price": 199.99
+    },
+    {
+      "id": 8,
+      "imageUrl": "https://example.com/image8.jpg",
+      "category": "Home Decor",
+      "title": "Wall Art",
+      "price": 49.99
+    },
+    {
+      "id": 9,
+      "imageUrl": "https://example.com/image9.jpg",
+      "category": "Beauty",
+      "title": "Facial Cleanser",
+      "price": 14.99
+    },
+    {
+      "id": 10,
+      "imageUrl": "https://example.com/image10.jpg",
+      "category": "Sports",
+      "title": "Yoga Mat",
+      "price": 24.99
+    },
+    {
+      "id": 11,
+      "imageUrl": "https://example.com/image11.jpg",
+      "category": "Clothing",
+      "title": "Dress",
+      "price": 79.99
+    },
+    {
+      "id": 12,
+      "imageUrl": "https://example.com/image12.jpg",
+      "category": "Electronics",
+      "title": "Bluetooth Speaker",
+      "price": 79.99
+    },
+    {
+      "id": 13,
+      "imageUrl": "https://example.com/image13.jpg",
+      "category": "Home Decor",
+      "title": "Candle Holder",
+      "price": 9.99
+    },
+    {
+      "id": 14,
+      "imageUrl": "https://example.com/image14.jpg",
+      "category": "Beauty",
+      "title": "Hair Dryer",
+      "price": 49.99
+    },
+    {
+      "id": 15,
+      "imageUrl": "https://example.com/image15.jpg",
+      "category": "Books",
+      "title": "Mystery Novel",
+      "price": 14.99
+    },
+    {
+      "id": 16,
+      "imageUrl": "https://example.com/image16.jpg",
+      "category": "Electronics",
+      "title": "Laptop",
+      "price": 899.99
+    },
+    {
+      "id": 17,
+      "imageUrl": "https://example.com/image17.jpg",
+      "category": "Sports",
+      "title": "Dumbbells Set",
+      "price": 49.99
+    },
+    {
+      "id": 18,
+      "imageUrl": "https://example.com/image18.jpg",
+      "category": "Clothing",
+      "title": "Sweater",
+      "price": 39.99
+    },
+    {
+      "id": 19,
+      "imageUrl": "https://example.com/image19.jpg",
+      "category": "Home Decor",
+      "title": "Table Lamp",
+      "price": 34.99
+    },
+    {
+      "id": 20,
+      "imageUrl": "https://example.com/image20.jpg",
+      "category": "Beauty",
+      "title": "Lipstick",
+      "price": 9.99
+    },
+    {
+      "id": 21,
+      "imageUrl": "https://example.com/image21.jpg",
+      "category": "Books",
+      "title": "Sci-Fi Novel",
+      "price": 16.99
+    },
+    {
+      "id": 22,
+      "imageUrl": "https://example.com/image22.jpg",
+      "category": "Electronics",
+      "title": "Headphones",
+      "price": 69.99
+    },
+    {
+      "id": 23,
+      "imageUrl": "https://example.com/image23.jpg",
+      "category": "Sports",
+      "title": "Running Shoes",
+      "price": 89.99
+    },
+    {
+      "id": 24,
+      "imageUrl": "https://example.com/image24.jpg",
+      "category": "Clothing",
+      "title": "Blouse",
+      "price": 29.99
+    },
+    {
+      "id": 25,
+      "imageUrl": "https://example.com/image25.jpg",
+      "category": "Home Decor",
+      "title": "Cozy Blanket",
+      "price": 39.99
+    },
+    {
+      "id": 26,
+      "imageUrl": "https://example.com/image26.jpg",
+      "category": "Beauty",
+      "title": "Face Mask",
+      "price": 6.99
+    },
+    {
+      "id": 27,
+      "imageUrl": "https://example.com/image27.jpg",
+      "category": "Electronics",
+      "title": "Gaming Console",
+      "price": 399.99
+    },
+    {
+      "id": 28,
+      "imageUrl": "https://example.com/image28.jpg",
+      "category": "Books",
+      "title": "Biography",
+      "price": 11.99
+    },
+    {
+      "id": 29,
+      "imageUrl": "https://example.com/image29.jpg",
+      "category": "Sports",
+      "title": "Fitness Tracker",
+      "price": 79.99
+    },
+    {
+      "id": 30,
+      "imageUrl": "https://example.com/image30.jpg",
+      "category": "Clothing",
+      "title": "Sweatpants",
+      "price": 34.99
+    },
+    {
+      "id": 31,
+      "imageUrl": "https://example.com/image31.jpg",
+      "category": "Home Decor",
+      "title": "Wall Clock",
+      "price": 24.99
+    },
+    {
+      "id": 32,
+      "imageUrl": "https://example.com/image32.jpg",
+      "category": "Beauty",
+      "title": "Perfume",
+      "price": 59.99
+    },
+    {
+      "id": 33,
+      "imageUrl": "https://example.com/image33.jpg",
+      "category": "Electronics",
+      "title": "Camera",
+      "price": 699.99
+    },
+    {
+      "id": 34,
+      "imageUrl": "https://example.com/image34.jpg",
+      "category": "Books",
+      "title": "Self-Help Book",
+      "price": 9.99
+    },
+    {
+      "id": 35,
+      "imageUrl": "https://example.com/image35.jpg",
+      "category": "Sports",
+      "title": "Bicycle",
+      "price": 249.99
+    },
+    {
+      "id": 36,
+      "imageUrl": "https://example.com/image36.jpg",
+      "category": "Clothing",
+      "title": "Jacket",
+      "price": 79.99
+    },
+    {
+      "id": 37,
+      "imageUrl": "https://example.com/image37.jpg",
+      "category": "Home Decor",
+      "title": "Throw Blanket",
+      "price": 19.99
+    },
+    {
+      "id": 38,
+      "imageUrl": "https://example.com/image38.jpg",
+      "category": "Beauty",
+      "title": "Nail Polish",
+      "price": 7.99
+    },
+    {
+      "id": 39,
+      "imageUrl": "https://example.com/image39.jpg",
+      "category": "Electronics",
+      "title": "Smart TV",
+      "price": 999.99
+    },
+    {
+      "id": 40,
+      "imageUrl": "https://example.com/image40.jpg",
+      "category": "Books",
+      "title": "Historical Fiction",
+      "price": 14.99
+    },
+    {
+      "id": 41,
+      "imageUrl": "https://example.com/image41.jpg",
+      "category": "Sports",
+      "title": "Yoga Mat",
+      "price": 24.99
+    },
+    {
+      "id": 42,
+      "imageUrl": "https://example.com/image42.jpg",
+      "category": "Clothing",
+      "title": "Dress Shirt",
+      "price": 49.99
+    },
+    {
+      "id": 43,
+      "imageUrl": "https://example.com/image43.jpg",
+      "category": "Home Decor",
+      "title": "Curtains",
+      "price": 29.99
+    },
+    {
+      "id": 44,
+      "imageUrl": "https://example.com/image44.jpg",
+      "category": "Beauty",
+      "title": "Face Moisturizer",
+      "price": 12.99
+    },
+    {
+      "id": 45,
+      "imageUrl": "https://example.com/image45.jpg",
+      "category": "Electronics",
+      "title": "Wireless Headphones",
+      "price": 129.99
+    },
+    {
+      "id": 46,
+      "imageUrl": "https://example.com/image46.jpg",
+      "category": "Books",
+      "title": "Cookbook",
+      "price": 19.99
+    },
+    {
+      "id": 47,
+      "imageUrl": "https://example.com/image47.jpg",
+      "category": "Sports",
+      "title": "Basketball",
+      "price": 24.99
+    },
+    {
+      "id": 48,
+      "imageUrl": "https://example.com/image48.jpg",
+      "category": "Clothing",
+      "title": "Sweatshirt",
+      "price": 39.99
+    },
+    {
+      "id": 49,
+      "imageUrl": "https://example.com/image49.jpg",
+      "category": "Home Decor",
+      "title": "Vase",
+      "price": 14.99
+    },
+    {
+      "id": 50,
+      "imageUrl": "https://example.com/image50.jpg",
+      "category": "Beauty",
+      "title": "Mascara",
+      "price": 8.99
+    }
+  ]
+  
