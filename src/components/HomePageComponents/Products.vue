@@ -18,6 +18,17 @@ import { ref, onMounted, onUpdated } from "vue";
 import axios from "axios";
 import {db,collection,getDocs} from "../../firebase.js"
 console.log(db)
+
+const getData = async ()=>{
+    const querySnapshot = await getDocs(collection(db,"vuestore"));
+querySnapshot.forEach((doc) => {
+  // doc.data() is never undefined for query doc snapshots
+  console.log(doc.id, " => ", doc.data());
+});
+}
+onMounted(async ()=>{
+    await getData();
+});
 // const products = productsData
 // console.log("Products:",products);
 // let count=ref(0);
@@ -36,28 +47,28 @@ console.log(db)
 // }
 
 //Part 10 api calls
-let Products = ref([]) // REACTIVE VARIABLE
- onMounted(async ()=>{
-    // let res = await fetch('https://fakestoreapi.com/products')
-    // let data = await res.json();
-    // console.log('data:', data);
-    // Products.value=data;
+// let Products = ref([]) // REACTIVE VARIABLE
+//  onMounted(async ()=>{
+//     // let res = await fetch('https://fakestoreapi.com/products')
+//     // let data = await res.json();
+//     // console.log('data:', data);
+//     // Products.value=data;
    
-    //axios
-    // axios.get('https://fakestoreapi.com/products')
-    // .then(function(response){
-    //     Products.value=response.data
-    //     console.log(response)
-    // }).catch(function(error){
+//     //axios
+//     // axios.get('https://fakestoreapi.com/products')
+//     // .then(function(response){
+//     //     Products.value=response.data
+//     //     console.log(response)
+//     // }).catch(function(error){
 
-    // }).finally(function(){
-    //     //.always executed
-    // })
+//     // }).finally(function(){
+//     //     //.always executed
+//     // })
 
-        let res = await axios.get('https://fakestoreapi.com/products');
-        Products.value=res.data;
+//         let res = await axios.get('https://fakestoreapi.com/products');
+//         Products.value=res.data;
 
-});
+// });
  
 </script>
 

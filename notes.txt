@@ -27,3 +27,11 @@ api call : always put into onMounted;
 
 
 Part 11 : Firebase Setup ,
+install, file : firebase.js, import all necessary functionality,
+
+
+Part 12 : 
+Q-form : upload file and submit it 
+read filedata->how to store to cloud->firebase storage->(url)->img 
+use basic q-form from quasar
+how to upload a file in vue.js : select file ->
