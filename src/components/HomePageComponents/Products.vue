@@ -1,10 +1,10 @@
 <template>
     <div id="products">
       <!-- <h3>This is products component</h3>  -->
- <div v-for="element in products" id="individual_product">
-<img :src="element.imageUrl" alt=""/>
-<p>{{ element.title }}</p>
-<p>{{ element.price }}</p>
+ <div v-for="item in Products" :key="item" id="individual_product">
+<img :src="item.image" alt=""/>
+<p>{{ item.title }}</p>
+<p>{{ item.price }}</p>
 </div> 
 <!-- <button @click="increment()">Increment</button>
 <h2>{{ count }}</h2> -->
@@ -12,11 +12,11 @@
 </template>
 
 <script setup>
-   import productsData from "../../data/prodcuts.json"
+//    import productsData from "../../data/prodcuts.json"
 //    console.log("producsData",productsData)
 import { ref, onMounted, onUpdated } from "vue";
-const products = productsData
-console.log("Products:",products);
+// const products = productsData
+// console.log("Products:",products);
 // let count=ref(0);
 
 // onMounted(()=>{
@@ -31,6 +31,16 @@ console.log("Products:",products);
 //     console.log("count:",count.value);
 
 // }
+
+//Part 10 api calls
+let Products = ref([])
+ onMounted(async ()=>{
+    let res = await fetch('https://fakestoreapi.com/products')
+    let data = await res.json();
+    console.log('data:', data);
+    Products.value=data;
+});
+ 
 </script>
 
 <style scoped>

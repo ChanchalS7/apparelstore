@@ -19,3 +19,5 @@ to iterate over array of objects and display them as list items
 Life cycle hook : different segment of application , -> created state, mounted state, updated state , unmounted state 
 
 Vue Router : /cart, /home, /admin, /order, 
+
+binding and input : v-model,  import (ref:individual elemnt can use any data structure,reactive: accept multiple input, only for object data structure,)
