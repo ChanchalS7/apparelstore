@@ -15,6 +15,9 @@
 //    import productsData from "../../data/prodcuts.json"
 //    console.log("producsData",productsData)
 import { ref, onMounted, onUpdated } from "vue";
+import axios from "axios";
+import {db,collection,getDocs} from "../../firebase.js"
+console.log(db)
 // const products = productsData
 // console.log("Products:",products);
 // let count=ref(0);
@@ -33,12 +36,27 @@ import { ref, onMounted, onUpdated } from "vue";
 // }
 
 //Part 10 api calls
-let Products = ref([])
+let Products = ref([]) // REACTIVE VARIABLE
  onMounted(async ()=>{
-    let res = await fetch('https://fakestoreapi.com/products')
-    let data = await res.json();
-    console.log('data:', data);
-    Products.value=data;
+    // let res = await fetch('https://fakestoreapi.com/products')
+    // let data = await res.json();
+    // console.log('data:', data);
+    // Products.value=data;
+   
+    //axios
+    // axios.get('https://fakestoreapi.com/products')
+    // .then(function(response){
+    //     Products.value=response.data
+    //     console.log(response)
+    // }).catch(function(error){
+
+    // }).finally(function(){
+    //     //.always executed
+    // })
+
+        let res = await axios.get('https://fakestoreapi.com/products');
+        Products.value=res.data;
+
 });
  
 </script>

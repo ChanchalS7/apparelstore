@@ -21,3 +21,9 @@ Life cycle hook : different segment of application , -> created state, mounted s
 Vue Router : /cart, /home, /admin, /order, 
 
 binding and input : v-model,  import (ref:individual elemnt can use any data structure,reactive: accept multiple input, only for object data structure,)
+
+calling an api : fetching api use fetch method, axios methond with fakestoreapi
+api call : always put into onMounted;
+
+
+Part 11 : Firebase Setup ,
