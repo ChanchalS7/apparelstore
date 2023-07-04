@@ -35,3 +35,9 @@ Q-form : upload file and submit it
 read filedata->how to store to cloud->firebase storage->(url)->img 
 use basic q-form from quasar
 how to upload a file in vue.js : select file ->
+upload form : title, price and imageUrl uqing q form in firebase firestore collection,
+
+Now read and write data :
+v-model and reactive connection done , now we have to make post and get request : 
+first we do write : post request, then get request, 
+setDoc() : 

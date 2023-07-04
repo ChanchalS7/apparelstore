@@ -1,34 +1,63 @@
 <template>
     <div id="products">
       <!-- <h3>This is products component</h3>  -->
- <div v-for="item in Products" :key="item" id="individual_product">
+ <!-- <div v-for="item in Products" :key="item" id="individual_product">
 <img :src="item.image" alt=""/>
 <p>{{ item.title }}</p>
 <p>{{ item.price }}</p>
-</div> 
+</div>  -->
+<div v-for="product in products" id="individual_product">
+    <img :src="product.imageUrl" alt=""/>
+    <p>{{product.title}}</p>
+    <p>{{product.price}}</p>
+</div>
 <!-- <button @click="increment()">Increment</button>
 <h2>{{ count }}</h2> -->
     </div>
 </template>
 
 <script setup>
+import {ref} from "vue";
+import {db,collection,getDocs} from "../../firebase.js";
+const products = ref([]);
+//reading firestore data
+const result = await getDocs(collection(db,"vuestore"));
+result.forEach((doc)=>{
+    let product = doc.data();
+    product.id=doc.id;
+    console.log("product:",product);
+    //doct.data() is never undefined for query doc snapshot
+})
+console.log("Products:",products.value)
 //    import productsData from "../../data/prodcuts.json"
 //    console.log("producsData",productsData)
-import { ref, onMounted, onUpdated } from "vue";
-import axios from "axios";
-import {db,collection,getDocs} from "../../firebase.js"
-console.log(db)
+// import { ref, onMounted, onUpdated } from "vue";
+// // import axios from "axios";
+// import {db,collection,getDocs} from "../../firebase.js"
+// import { getDoc } from "firebase/firestore/lite";
+// // console.log(db)
+// const products = ref([])
+// //reading firestore data
+// onMounted( async()=>{
+//     const result = await getDocs(collection(db,"vuestore"));
+// result.forEach((doc)=>{
+//     let product = doc.data();
+//     product.id=doc.id;
+//     console.log("product:",product);
+//     products.value.push(product);
+// });
+// });
 
-const getData = async ()=>{
-    const querySnapshot = await getDocs(collection(db,"vuestore"));
-querySnapshot.forEach((doc) => {
-  // doc.data() is never undefined for query doc snapshots
-  console.log(doc.id, " => ", doc.data());
-});
-}
-onMounted(async ()=>{
-    await getData();
-});
+// const getData = async ()=>{
+//     const querySnapshot = await getDocs(collection(db,"vuestore"));
+// querySnapshot.forEach((doc) => {
+//   // doc.data() is never undefined for query doc snapshots
+//   console.log(doc.id, " => ", doc.data());
+// });
+// }
+// onMounted(async ()=>{
+//     await getData();
+// });
 // const products = productsData
 // console.log("Products:",products);
 // let count=ref(0);

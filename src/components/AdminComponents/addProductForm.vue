@@ -20,11 +20,7 @@
         type="number"
         v-model="form.price"
         label="Product Price *"
-        lazy-rules
-        :rules="[
-          val => val !== null && val !== '' || 'Please type your age',
-          val => val > 0 && val < 100 || 'Please type a real age'
-        ]"
+        
       />
 
       <q-file 
@@ -46,6 +42,7 @@
 <script setup>
 import {ref, reactive} from "vue";
 import {getStorage, ref as firebaseref, uploadBytesResumable, getDownloadURL} from "../../firebase.js"
+import {db,collection, addDoc} from "../../firebase.js"
 const file = ref(null);
 //Upload form 
 const form = reactive({
@@ -102,7 +99,16 @@ uploadTask.on('state_changed',
 );
   // console.log("File is uploaded")
 }
+const onSubmit= async ()=>{
+  console.log(form);
+ 
 
+// Add a new document with a generated id.
+
+//addDoc(collection(db,...))
+const docRef = await addDoc(collection(db, "vuestore"), form);
+console.log("Document written with ID: ", docRef.id);
+}
 </script>
 
 <style scoped>
