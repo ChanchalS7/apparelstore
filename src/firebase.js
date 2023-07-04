@@ -1,5 +1,8 @@
 import { initializeApp } from 'firebase/app';
+//Firebase FIRESTORE functions
 import { getFirestore, collection, getDocs } from 'firebase/firestore/lite';
+//firebase storage function
+import { getStorage, ref, uploadBytesResumable, getDownloadURL } from "firebase/storage";
 // TODO: Replace the following with your app's Firebase project configuration
 
 const firebaseConfig = {
@@ -13,4 +16,4 @@ const firebaseConfig = {
   
 const app = initializeApp(firebaseConfig);
 const db = getFirestore(app);
-export {app,db,collection,getDocs}
+export {app,db,collection,getDocs, getStorage, ref, uploadBytesResumable, getDownloadURL}

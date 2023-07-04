@@ -8,7 +8,7 @@
     >
       <q-input
         filled
-        v-model="name"
+        v-model="form.title"
         label="Product Title *"
         hint="Name and surname"
         lazy-rules
@@ -18,7 +18,7 @@
       <q-input
         filled
         type="number"
-        v-model="age"
+        v-model="form.price"
         label="Product Price *"
         lazy-rules
         :rules="[
@@ -27,7 +27,10 @@
         ]"
       />
 
-      <q-file v-model="file" label="Choose Product Image"/>
+      <q-file 
+     v-model="file" label="Choose Product Image"
+     @update:modelValue="fileupload"
+      />
 
       <div>
         <q-btn label="Submit" type="submit" color="primary"/>
@@ -41,6 +44,64 @@
 </template>
 
 <script setup>
+import {ref, reactive} from "vue";
+import {getStorage, ref as firebaseref, uploadBytesResumable, getDownloadURL} from "../../firebase.js"
+const file = ref(null);
+//Upload form 
+const form = reactive({
+  title:"",
+  price:0,
+  imageUrl:"",
+});
+
+
+
+
+
+
+const fileupload=()=>{
+  //access file data
+  console.log(file.value)
+
+
+const storage = getStorage();
+//xyz=products/xyz.jpg
+const storageRef = firebaseref(storage, 'products/' + file.value.name);
+//actually passing the file data
+const uploadTask = uploadBytesResumable(storageRef, file.value);
+
+// Register three observers:
+// 1. 'state_changed' observer, called any time the state changes
+// 2. Error observer, called on failure
+// 3. Completion observer, called on successful completion
+uploadTask.on('state_changed', 
+  (snapshot) => {
+    // Observe state change events such as progress, pause, and resume
+    // Get task progress, including the number of bytes uploaded and the total number of bytes to be uploaded
+    const progress = (snapshot.bytesTransferred / snapshot.totalBytes) * 100;
+    console.log('Upload is ' + progress + '% done');
+    switch (snapshot.state) {
+      case 'paused':
+        console.log('Upload is paused');
+        break;
+      case 'running':
+        console.log('Upload is running');
+        break;
+    }
+  }, 
+  (error) => {
+    // Handle unsuccessful uploads
+  }, 
+  () => {
+    // Handle successful uploads on complete
+    // For instance, get the download URL: https://firebasestorage.googleapis.com/...
+    getDownloadURL(uploadTask.snapshot.ref).then((downloadURL) => {
+     form.imageUrl= downloadURL;
+    });
+  }
+);
+  // console.log("File is uploaded")
+}
 
 </script>
 
