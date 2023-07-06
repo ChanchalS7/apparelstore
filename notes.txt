@@ -41,3 +41,6 @@ Now read and write data :
 v-model and reactive connection done , now we have to make post and get request : 
 first we do write : post request, then get request, 
 setDoc() : 
+
+Chapter 14 : 
+v-router : dynamic route

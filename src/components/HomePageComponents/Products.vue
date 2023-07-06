@@ -6,7 +6,9 @@
 <p>{{ item.title }}</p>
 <p>{{ item.price }}</p>
 </div>  -->
-<div v-for="product in products" id="individual_product">
+<div 
+@click="showProduct(product.id)" 
+v-for="product in products" id="individual_product">
     <img :src="product.imageUrl" alt=""/>
     <p>{{product.title}}</p>
     <p>{{product.price}}</p>
@@ -17,18 +19,29 @@
 </template>
 
 <script setup>
-import {ref} from "vue";
+import {ref, onMounted} from "vue";
+import {useRouter} from "vue-router"
 import {db,collection,getDocs} from "../../firebase.js";
+
 const products = ref([]);
+const router = useRouter();
 //reading firestore data
-const result = await getDocs(collection(db,"vuestore"));
+onMounted(async()=>{
+    const result = await getDocs(collection(db,"vuestore"));
 result.forEach((doc)=>{
     let product = doc.data();
     product.id=doc.id;
-    console.log("product:",product);
+    products.value.push(product)
+    // console.log("product:",product);
     //doct.data() is never undefined for query doc snapshot
+    console.log("Products:",products.value)
 })
-console.log("Products:",products.value)
+})
+
+const showProduct=(id)=>{
+    console.log(id)
+    router.push(`productdetails/${id}`)
+}
 //    import productsData from "../../data/prodcuts.json"
 //    console.log("producsData",productsData)
 // import { ref, onMounted, onUpdated } from "vue";

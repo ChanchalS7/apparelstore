@@ -4,12 +4,14 @@
 import { createRouter, createWebHistory } from "vue-router"
 import Home from "./views/Home.vue"
 import Admin from "./views/Admin.vue"
+import ProductDetails from "./views/ProductDetails.vue"
 // 2. Define some routes
 // Each route should map to a component.
 // We'll talk about nested routes later.
 const routes = [
   { path: '/', component: Home },
-  {path:"/admin", component:Admin}
+  {path:"/admin", component:Admin},
+  {path:"/productdetails/:id",component: ProductDetails}
 
 ]
 
