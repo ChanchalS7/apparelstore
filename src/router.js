@@ -11,7 +11,7 @@ import ProductDetails from "./views/ProductDetails.vue"
 const routes = [
   { path: '/', component: Home },
   {path:"/admin", component:Admin},
-  {path:"/productdetails/:id",component: ProductDetails}
+  {path:"/productdetails/:id",component: ProductDetails},
 
 ]
 
