@@ -44,3 +44,12 @@ setDoc() :
 
 Chapter 14 : 
 v-router : dynamic route
+
+
+Global state management : 
+                        state->component data -><script></script>
+                        many to many relationship in component
+        ->solution : A data which is accessible for many component we can put it in one file and all component can aceess it,
+        eg cart, product need to be accessible from everywhere.
+
+        Cart architecture : read product, -> add to cart ->store.js -> grab the property -> create function inside store.js addToCart()

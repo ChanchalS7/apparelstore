@@ -8,6 +8,7 @@
         <div id="rhs">
             <p>{{ product.title }}</p>
             <p>{{product.price}}</p>
+            <q-btn @click="addtoCart(product)" id="addtocart_btn" color="black" label="Add To Cart"/>
        
         </div>
     </div>
@@ -17,7 +18,9 @@
 import { onMounted, ref } from "vue";
 import {db, doc, getDoc} from "../../firebase.js"
 import {useRoute} from "vue-router"
+import { useCartStore } from "../../store.js";
 const route = useRoute();
+const cartStore=useCartStore();
 const product = ref({});
 onMounted(async()=>{
 const docRef = doc(db, "vuestore", route.params.id);
@@ -31,6 +34,14 @@ if (docSnap.exists()) {
   console.log("No such document!");
 }
 });
+const addtoCart=(product)=>{
+    //calling the action present in store.js
+ 
+    cartStore.addtoCart(product)
+    
+// console.log("product:",product);
+
+}
 </script>
 
 <style scoped>
@@ -52,5 +63,9 @@ if (docSnap.exists()) {
     flex-direction: column;
     margin-left: 3%;
     font-size: 180%;
+}
+#addtocart_btn{
+    width: 50%;
+
 }
 </style>
