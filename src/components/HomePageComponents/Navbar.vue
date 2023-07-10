@@ -4,18 +4,23 @@
         <div id="rhs">
            <div>Account</div>
            <div id="cart">
-            <q-icon name="shopping_cart"/>
+            <q-icon @click="dialog=!dialog" name="shopping_cart"/>
            </div>
            <div id="cart_count">{{CartStore.cartCount}}</div>
+           <cartPopupComponent :dialogVisibility="dialog"/>
         </div>
 
     </div>
 </template>
 
 <script setup>
+import {ref} from "vue";
    import { useCartStore } from '../../store.js';
+   import cartPopupComponent from "../CartComponents/cartPopup.vue"
    const CartStore=useCartStore();
-console.log(CartStore)
+// console.log(CartStore)
+const dialog = ref(false)
+
 </script>
 
 <style scoped>
@@ -36,7 +41,7 @@ console.log(CartStore)
 #rhs {
     display:flex;
     flex: 7;
-    gap:10%;
+    gap:3%;
     align-items: center;
     justify-content: flex-end;
 }
@@ -46,6 +51,6 @@ console.log(CartStore)
 
 }
 #cart_count{
-    padding-bottom: 12px;
+    padding-bottom: 1px;
 }
 </style>
