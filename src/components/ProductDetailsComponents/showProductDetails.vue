@@ -22,13 +22,17 @@ import { useCartStore } from "../../store.js";
 const route = useRoute();
 const cartStore=useCartStore();
 const product = ref({});
+
+//Mounting the data    
 onMounted(async()=>{
 const docRef = doc(db, "vuestore", route.params.id);
 const docSnap = await getDoc(docRef);
 
 if (docSnap.exists()) {
-  console.log("Document data:", docSnap.data());
-  product.value=docSnap.data()
+    console.log("docSnap:",docSnap.id);
+    let prod = docSnap.data();
+    prod.id=docSnap.id;
+    product.value = prod;
 } else {
   // docSnap.data() will be undefined in this case
   console.log("No such document!");
