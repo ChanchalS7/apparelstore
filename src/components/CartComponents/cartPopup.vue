@@ -20,6 +20,10 @@
                
             </div>
           </div>
+          <div id="place_order">
+            <router-link to="/orders">  <q-btn color="secondary" label="Proceed"/></router-link>
+          
+          </div>
         </q-card-section>
       </q-card>
     </q-dialog>
@@ -62,6 +66,10 @@ import { useCartStore } from "../../store.js";
     display: flex;
     flex: 4;
     flex-direction: column;
+}
+#place_order{
+  margin-top: 5%;
+  margin-bottom: 5%;
 }
 
 </style>

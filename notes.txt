@@ -53,3 +53,8 @@ Global state management :
         eg cart, product need to be accessible from everywhere.
 
         Cart architecture : read product, -> add to cart ->store.js -> grab the property -> create function inside store.js addToCart()
+
+
+
+
+    Managing Customer Order : from cart component-> /order -> fill all the details of customer or where to deliver the order [name,address,contact,orders, cartTotal]->[q-form]-> set all these detail in firebase collection and then proceed.
