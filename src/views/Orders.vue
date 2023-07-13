@@ -1,13 +1,17 @@
 <template>
-   <NavbarComponent/>
-  <div id="container">
-    
-    <q-form @submit="onSubmit" id="orders_form" class="q-gutter-md">
+<NavbarComponent/> 
+ <div id="container">
+  <q-form
+      @submit="onSubmit"
+      id="orders_form"
+      class="q-gutter-md"
+    >
       <q-input
         filled
         v-model="form.name"
         label="Your name *"
         hint="Name and surname"
+       
       />
 
       <q-input
@@ -15,29 +19,40 @@
         type="number"
         v-model="form.contact"
         label="Your contact number *"
+        
       />
       <q-input
-        filled
-        type="text"
-        v-model="from.address"
-        label="Your address *"
+      filled
+      type="text"
+      v-model="form.address"
+      label="Your address *"
       />
 
+    
+
       <div>
-        <q-btn label="Submit" type="submit" color="primary" id="btn" />
+        <q-btn label="Submit" type="submit" color="primary"/>
+       
       </div>
     </q-form>
-  </div>
+ </div>
 </template>
 
-<script>
-import { reactive } from 'vue';
+<script setup>
   import NavbarComponent from '../components/HomePageComponents/Navbar.vue';
-const from = reactive({
+import { reactive } from 'vue';
+import {useCartStore} from "../store.js"
+const cartStore = useCartStore();
+const form = reactive({
     name:"",
     contact:null,
     address:"",
+    order:cartStore.cart,
+    total:cartStore.cartTotal,
 })
+const onSubmit=()=>{
+  console.log(form);
+}
 </script>
 
 <style scoped>
