@@ -42,6 +42,7 @@
   import NavbarComponent from '../components/HomePageComponents/Navbar.vue';
 import { reactive } from 'vue';
 import {useCartStore} from "../store.js"
+import { db, collection, addDoc,} from '../firebase'
 const cartStore = useCartStore();
 const form = reactive({
     name:"",
@@ -50,8 +51,10 @@ const form = reactive({
     order:cartStore.cart,
     total:cartStore.cartTotal,
 })
-const onSubmit=()=>{
-  console.log(form);
+const onSubmit= async ()=>{
+const docRef = await addDoc(collection(db,"orders"),form);
+console.log('Document written with ID:', docRef.id);
+
 }
 </script>
 

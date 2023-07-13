@@ -18,5 +18,10 @@ export const useCartStore = defineStore('cart', ()=>{
       return el.id !== id;
     })
   }
-  return {cartCount, addtoCart,cart, removefromCart};
+  const cartTotal = computed(() => {
+    return cart.value.reduce((total, product) => {
+      return total + Number(product.price);
+    }, 0);
+  });
+  return {cartCount, addtoCart,cart, removefromCart, cartTotal};
 });

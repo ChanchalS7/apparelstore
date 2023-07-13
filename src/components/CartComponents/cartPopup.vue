@@ -6,6 +6,7 @@
         <q-card-section>
           <div>
            <h4>Recently Added Items</h4>
+           <h5>Total:{{ cartStore.cartTotal}}</h5>
           </div>
 
           <q-space />
