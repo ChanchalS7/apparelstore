@@ -58,3 +58,33 @@ Global state management :
 
 
     Managing Customer Order : from cart component-> /order -> fill all the details of customer or where to deliver the order [name,address,contact,orders, cartTotal]->[q-form]-> set all these detail in firebase collection and then proceed.
+
+
+
+
+
+    Project Summary : 
+    1. We use vite for setup Vue.
+    2. Vue ecosystem, single file component, composition API, template,script and style, 
+    3. We learn data reactivity(ref,reactive).
+    4. Vue directive(v-for) similar to for in loop use file products.json
+    5. Cloud server use firebase, firestore learnt about database connection, api calling with inbuilt firebase function.
+    6. Use seperate firebase.js file and use import and export  file.
+    7. Learnt about new topic View directory(folder). All routes component file, main theme.
+    8. Router.js file where all router and path registered in this file.
+    9. This router.js file will be render to main.js file to make dynamic routing done.
+    10. We use QUASAR for different component and form and styling components.
+    11.We learnt about form input binding Vue directive(v-model) we used for accepting form data.
+    12. API call we have done with firebase function getDoc, setDoc,db, collection and necessary methods imports are being done.
+    13. We did use toggling cart popup, tools we used props for parent and child communication.
+    14. We use global state management to to sent data form one place to anywhere data globally, we use tools "penia" store in store.js it is props, computed and actions related property.
+        These are the way we leant about it.
+
+
+    Vue ecosystem is evolving : 1.Try to master Data reactivity 
+                                2. SFC
+                                3.V-model
+                                4. App.vue-Views-component
+                                5. Composition API and also basic idea about options API.
+                                6. Full stack application : Vue framework Nuxt.js you can try.
+                                7. Try to setup Nuxt.js, just watch difference
